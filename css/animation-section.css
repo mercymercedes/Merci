@@ -1,0 +1,40 @@
+/* animation-section.css */
+
+.animation-content {
+    flex: 1;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+#watch-animation-button {
+    background-color: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#watch-animation-button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.animation-box {
+    display: none; /* Hidden initially */
+    margin-left: 20px;
+}
+
+.animation-box iframe {
+    width: 100%;
+    height: 400px;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}

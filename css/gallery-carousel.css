@@ -1,0 +1,113 @@
+/* gallery-carousel.css */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.art-gallery-wall {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: url('../images/gallery-background.jpg') center/cover no-repeat;
+    padding: 60px;
+    border: 10px solid #444;
+    border-radius: 10px;
+    margin: 40px auto;
+    width: 95%;
+    max-width: 1400px;
+    height: 700px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.frame-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 40px; /* Space between frames */
+}
+
+.frame {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #ff69b4;
+    background-color: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: visible;
+    position: relative;
+    margin-bottom: 0; /* Reset to remove excess bottom margin */
+}
+
+.frame img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.3s;
+}
+
+.large-frame {
+    transform: scale(1.5); /* Ensure the center frame is 200% larger */
+}
+.small-frame {
+    transform: scale(0.75); /* Increase the scale of side frames */
+}
+
+.description-box {
+    display: none; /* Initially hidden */
+    background-color: #fff;
+    border: 1px solid #000;
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 0.8rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    bottom: -50px; /* Position slightly above the bottom */
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    white-space: nowrap;
+    z-index: 10; /* Ensure it stays above other elements */
+}
+
+.large-frame .description-box {
+    display: block; /* Show only for the large frame */
+    bottom: -50px; /* Adjust to ensure it appears just below the artwork */
+}
+
+.arrow {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #444;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 20px;
+}
+
+.right-arrow {
+    right: 20px;
+}
+
+.arrow:hover {
+    color: #000;
+}
